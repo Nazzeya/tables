@@ -6,11 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table/table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from '../material-module';
 import { TableV2Component } from './table_v2/table-v2/table-v2.component';
 import { FormsModule } from '@angular/forms';
 import { PostPipe } from './table_v2/pipes/post.pipe';
 import { SortableHeaderDirective } from './table_v2/directives/sortable-header.directive';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { ScrollComponent } from './pagination/scroll/scroll.component';
 
 @NgModule({
   declarations: [
@@ -18,15 +19,16 @@ import { SortableHeaderDirective } from './table_v2/directives/sortable-header.d
     TableComponent,
     TableV2Component,
     PostPipe,
-    SortableHeaderDirective
+    SortableHeaderDirective,
+    ScrollComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule, 
-    MaterialModule,
-    FormsModule
+    FormsModule,
+    InfiniteScrollModule
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,11 @@
+<div class="container">
+    <ul infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()">
+        <li *ngFor="let number of post">
+            {{number}}
+        </li>
+    </ul>
+    <p>Loading...</p>
+</div>
