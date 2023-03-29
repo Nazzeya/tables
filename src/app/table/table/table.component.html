@@ -1,0 +1,126 @@
+<style type="text/css">
+
+    .div2 {
+        max-width: 800px;
+        margin: auto;
+        margin-top: 100px;
+        padding-bottom: 100px;
+    }
+    .div2 table {
+    width: 100%;
+    }
+
+    .div2 th {
+        padding: 10px;
+    }
+
+    .div1 {
+        width: calc(100vw - 50px);
+        height: calc(100vh - 50px);
+        overflow: scroll;
+        border: 1px solid #777;
+    }
+
+    .div1 table {
+        border-spacing: 0;
+    }
+
+    .div1 th {
+        border: 1px solid #bbb;
+        padding: 5px;
+        min-width: 200px;
+        position: sticky;
+        top: 0;
+    }
+
+    .div1 td {
+        border: 1px solid #bbb;
+        padding: 5px;
+        width: 300px;
+    }
+
+    .div1 th:nth-child(1),
+    .div1 td:nth-child(1) {
+        position: sticky;
+        left: 0;
+    }
+
+    .div1 th:nth-child(2),
+    .div1 td:nth-child(2) {
+        position: sticky;
+        left: 212px;
+    }
+</style>
+
+<div class="div1">
+    <table>
+        <tr>
+            <th>Post id</th>
+            <th>Post user id</th>
+            <th>Post title </th>
+            <th>Post body</th>
+            <th>Post title </th>
+            <th>Post body</th>
+            <th>Post title </th>
+            <th>Post body</th>
+            <th>Post title </th>
+            <th>Post body</th>
+            <th>Post title </th>
+            <th>Post body</th>
+        </tr>
+        <tr *ngFor="let post of posts">
+            <td>{{post.id}}</td>
+            <td>{{post.userId}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+        </tr>
+    </table>
+</div>
+<!-- 
+<div class="div2">
+    <table mat-table [dataSource]="posts" class="mat-elevation-z8">
+    
+        
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+    
+        
+        <ng-container matColumnDef="userId">
+            <th mat-header-cell *matHeaderCellDef> UserId </th>
+            <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
+        </ng-container>
+    
+        
+        <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef> Title </th>
+            <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+        </ng-container>
+    
+        
+        <ng-container matColumnDef="body">
+            <th mat-header-cell *matHeaderCellDef> Body </th>
+            <td mat-cell *matCellDef="let element"> {{element.body}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons>
+
+    </mat-paginator>
+</div>
+
+
+
+ -->

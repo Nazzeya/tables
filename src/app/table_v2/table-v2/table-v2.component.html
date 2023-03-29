@@ -1,0 +1,33 @@
+<div class="row mt-3">
+    <div class="col">
+        <div class="header">
+            <h1>Sort & Filter Data Tables in Angular</h1>
+        </div>
+
+        <div class="container">
+            <div class="form-group">
+                <input type="search" class="form-control" [(ngModel)]="filter" placeholder="Filter by name or capital">
+            </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th width="100" scope="col" sortable="id" (sort)="onSort($event)">Id</th>
+                                    <th width="100" scope="col" sortable="userId" (sort)="onSort($event)" width="150">UserID</th>
+                                    <th scope="col" sortable="title" (sort)="onSort($event)" class="text-center" width="100">Title</th>
+                                    <th scope="col" sortable="body" (sort)="onSort($event)" class="text-center" width="150">Body</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let post of posts | post:filter">
+                                    <td width="100" class="text-center">{{ post.id }}</td>
+                                    <td width="100" class="text-center">{{ post.userId }}</td>
+                                    <td class="text-center" width="200">{{ post.title }}</td>
+                                    <td class="text-center" width="300">{{ post.body }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+        </div>
+    </div>
+</div>
