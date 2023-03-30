@@ -13,6 +13,8 @@ import { SortableHeaderDirective } from './table_v2/directives/sortable-header.d
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ScrollComponent } from './pagination/scroll/scroll.component';
 import { PagesComponent } from './pagination/pages/pages.component';
+import { ProgressiveRenderingComponent } from './rendering/progressive-rendering/progressive-rendering.component';
+import { NgxtForDirective } from './rendering/directives/ngxt-for.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PagesComponent } from './pagination/pages/pages.component';
     PostPipe,
     SortableHeaderDirective,
     ScrollComponent,
-    PagesComponent
+    PagesComponent,
+    ProgressiveRenderingComponent,
+    NgxtForDirective
   ],
   imports: [
     BrowserModule,

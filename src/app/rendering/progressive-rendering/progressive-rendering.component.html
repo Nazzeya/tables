@@ -1,0 +1,11 @@
+<h2>50000 item list using custom ngxtFor directive</h2>
+<button (click)="toggleShow()">Show List</button>
+
+<ul *ngIf="show">
+    <li *ngxtFor="
+      let item of longList; 
+      itemsAtOnce: 500;
+      intervalLength: 20">
+        Item - {{item.id}}
+    </li>
+</ul>
