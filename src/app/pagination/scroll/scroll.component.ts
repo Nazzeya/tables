@@ -18,7 +18,7 @@ export class ScrollComponent implements OnInit {
     console.log(this.post)
   }
 
-  onScroll() {
+  onScroll() { //ngx-infinite-scroll
     const length = this.post.length; 
     setTimeout(() => {
       const p: any = ' '.repeat(100).split('').map((s, i) => i+1+length);

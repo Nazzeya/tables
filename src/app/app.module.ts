@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table/table.component';
@@ -12,6 +12,7 @@ import { PostPipe } from './table_v2/pipes/post.pipe';
 import { SortableHeaderDirective } from './table_v2/directives/sortable-header.directive';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ScrollComponent } from './pagination/scroll/scroll.component';
+import { PagesComponent } from './pagination/pages/pages.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ScrollComponent } from './pagination/scroll/scroll.component';
     TableV2Component,
     PostPipe,
     SortableHeaderDirective,
-    ScrollComponent
+    ScrollComponent,
+    PagesComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { ScrollComponent } from './pagination/scroll/scroll.component';
     HttpClientModule,
     BrowserAnimationsModule, 
     FormsModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    NgxPaginationModule
   ],
   bootstrap: [AppComponent]
 })
